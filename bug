@@ -1,0 +1,54 @@
+/root/llm/Langchain-Chatchat-master/server/knowledge_base/kb_cache/faiss_cache.py
+# vector_store = FAISS.load_local(vs_path, embeddings, distance_strategy="METRIC_INNER_PRODUCT")
+
+./server/utils.py
+config["conv_template"] = CONV_TEMPLATE
+
+
+/root/llm/Langchain-Chatchat-master/server/knowledge_base/kb_doc_api.py
+data = [DocumentWithVSId(**x[0].dict(), score=x[1], id=x[0].metadata.get("id")) for x in docs]
+
+
+
+/root/.local/conda/envs/chatchat/lib/python3.11/site-packages/langchain_community/vectorstores/faiss.py
+        allow_dangerous_deserialization: bool = True,
+        **kwargs: Any,
+
+/root/.local/conda/envs/chatchat/lib/python3.11/site-packages/langchain_text_splitters/markdown.py
+
+改的是文档分块策略
+            Document(json.dumps(chunk["metadata"])+"\n"+page_content=chunk["content"], metadata=chunk["metadata"])
+            for chunk in aggregated_chunks
+        documents = []
+        for chunk in aggregated_chunks:
+            metadata = chunk["metadata"]
+            max_head_num = 0
+            metadata_text = ""
+            for key, value in metadata.items():
+                if key.startswith("head") and key[4:].isdigit():
+                    head_num = int(key[4:])
+                    if head_num > max_head_num:
+                        max_head_num = head_num
+                        metadata_text = value
+            if len(metadata_text)>0:  # 仅在找到符合条件的head时添加
+                page_content = f'{metadata_text}\n{chunk["content"]}'
+                documents.append(Document(page_content=page_content, metadata=chunk["metadata"]))
+        return documents
+
+        
+/root/.local/conda/envs/chatchat/lib/python3.11/site-packages/langchain_community/vectorstores/faiss.py
+修改metadata匹配机制(向量匹配)
+
+
+
+
+/root/.local/conda/envs/chatchat/lib/python3.11/site-packages/langchain_community/vectorstores/faiss.py
+/root/llm/Langchain-Chatchat-master/server/embeddings_api.py
+/root/llm/Langchain-Chatchat-master/server/knowledge_base/kb_cache/base.py
+/root/llm/Langchain-Chatchat-master/server/knowledge_base/kb_service/base.py
+/root/llm/Langchain-Chatchat-master/server/knowledge_base/kb_service/faiss_kb_service.py
+/root/.local/conda/envs/chatchat/lib/python3.11/site-packages/langchain_community/embeddings/huggingface.py
+
+
+metadata的向量持久化
+/root/llm/Langchain-Chatchat-master/server/embeddings_api.py

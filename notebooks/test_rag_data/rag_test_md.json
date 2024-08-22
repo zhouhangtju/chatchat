@@ -1,0 +1,287 @@
+[
+    {
+        "query": "RUIJIERG-S6000E系列交换机,如何配置三层AP口",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机,如何开启接口索引永久化功能，即设备重启后接口索引不变",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机,如何配置接口的属性，接口模式下，如何设置接口的带宽参数",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置一定范围的接口",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口的索引永久化",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口的LinkTrap",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口的管理状态",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口震荡保护功能",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口Syslog信息功能",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置标准MIB节点中接口名称的增强显示功能",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置一定范围的接口",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口索引永久化",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口的LinkTrap",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口的管理状态",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口震荡保护功能 ",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置打印接口Syslog信息功能",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置标准MIB节点中接口名称的增强显示功能",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置路由端口",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置三层AP口",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口介质类型",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口速率",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口双工模式",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口流控模式",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置自协商因子模式",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口MTU",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置全局MTU",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口带宽",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口载波时延",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口Load-interval",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口Load-interval",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何设置保护口",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何保护口之间三层路由阻断",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置端口违例恢复",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置端口节能",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置端口节能",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何在命令行显示指定接口的全部状态和配置信息",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何在命令行显示指定接口的全部状态和配置信息",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何在命令行显示接口的状态",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何在命令行显示接口违例状态",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何在命令行查看端口链路状态变化时间和次数",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何在命令行显示指定端口的统计值信息，其中速率显示可能有0.5%内的误差",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何在命令行显示接口EEE状态",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何在命令行显示全局MTU信息",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何在命令行显示指定接口的光模块基本信息",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置全局MAC地址学习能力",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置动态地址老化时间",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置静态地址",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置过滤地址",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置使能发送Trap功能",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置接口MAC地址通知开关",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置全局MAC地址通知开关",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置MAC地址通知的时间间隔与历史记录容量",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置MAC地址漂移检测功能",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    {
+        "query": "RUIJIERG-S6000E系列交换机，如何配置以太网静态AP成员口",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    }
+]

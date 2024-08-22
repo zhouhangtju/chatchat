@@ -1,0 +1,626 @@
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机,如何配置三层AP口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+<指令>根据已知信息，简洁和专业的来回答问题。如果无法从中得到答案，请说 “根据已知信息无法回答该问题”，不允许在答案中添加编造成分，答案请使用中文。 </指令>
+<已知信息>{"head1": "配置指南-以太网交换", "head2": "1  接口", "head3": "1.3 功能详解", "head4": "1.4.2 配置接口属性", "head5": "配置方法", "head6": "配置三层 AP 口"}
++ 可选配置。  
++ 可以在接口配置模式下，执行no switchport命令将一个二层AP口配置成三层AP口。使用switchport命令时，可以
+将一个三层AP口配置成二层AP口。  
++ 配置成三层路由口后将使该接口上运行的二层协议失效。  
++ 支持二层聚合口上配置。  
+【命令格式】 no switchport
+【参数说明】 -^
+【缺省配置】 缺省情况下，交换机上的AP端口缺省为二层AP口
+【命令模式】 接口配置模式
+【使用指导】 在三层交换机设备上，进入二层AP口的接口模式后，使用该命令可以将一个二层AP口配置成三层AP口。进入三层AP口的接口模式后，使用switchport命令可以将一个三层AP口转换成二层AP口。
+{"head1": "配置指南-以太网交换", "head2": "3 Aggregate Port", "head3": "3.4 配置详解", "head4": "3.4.1 配置静态 AP", "head5": "配置方法", "head6": "二层 AP 与三层 AP 的转化"}
++ 为可选配置。  
++ 如果需要启用AP口的三层路由等功能，比如需要在AP口上配置IP地址，或者配置静态路由表项等，需要先将二层AP口转化为三层AP口，再在三层AP口上启用路由等功能。  
++ 该功能可在三层交换机等支持二、三层功能和AP功能的设备上配置。  
+【命令格式】 no switchport
+【参数说明】 -
+【缺省配置】 在支持二、三层功能和接口二、三层转换功能的设备上，AP口缺省为二层口。
+【命令模式】 AP接口配置模式
+【使用指导】 L3 AP是三层设备才支持的功能，所有二层设备均不支持。  
+对于三层设备，如果该设备不支持二层功能，AP口被创建时，则是一个三层AP口，否则AP口被创建时是一个二层AP口。
+{"head1": "配置指南-以太网交换", "head2": "3 Aggregate Port", "head3": "3.4 配置详解", "head4": "3.4.5 配置 AP 的容量模式", "head5": "配置方法", "head6": "配置 AP 容量模式"}
++ 为可选配置，当需要改变当前系统AP的容量值时配置，以适应网络部署中AP的个数或者每个AP口允许聚合的成员口个数的变化需求。  
++ 可在核心交换机等支持改变AP容量功能的设备上配置该功能。  
+【命令格式】 aggregateport capacity mode capacity-mode
+【参数说明】 capacity-mode： 模式选项
+【缺省配置】 缺省情况下，AP的容量模式随着不同的产品系列而不同，比如有256*16(其中， 256 代表设备支持的最大AP口个数， 16 代表每个AP口支持的最大成员口个数)等容量模式。
+【命令模式】 全局配置模式
+【使用指导】 在支持容量模式配置的产品中，系统会提供几种可配置的容量模式供用户选择，在全局配置模式下，用户可以通过aggregateport capacity mode capacity-mode配置命令来选择需要的容量模式。用户可以在全局配置模式下，通过no aggregateport capacity mode 将容量模式恢复为默认值。</已知信息>
+<问题>RUIJIERG-S6000E系列交换机,如何配置三层AP口,请生成配置指令代码</问题><eot_id>
+{"docs": ["出处 [1] [None](http://127.0.0.1:7861/knowledge_base/download_doc?knowledge_base_name=cloudResources&file_name=None) \n\n{\"head1\": \"配置指南-以太网交换\", \"head2\": \"1  接口\", \"head3\": \"1.3 功能详解\", \"head4\": \"1.4.2 配置接口属性\", \"head5\": \"配置方法\", \"head6\": \"配置三层 AP 口\"}\n+ 可选配置。  \n+ 可以在接口配置模式下，执行no switchport命令将一个二层AP口配置成三层AP口。使用switchport命令时，可以\n将一个三层AP口配置成二层AP口。  \n+ 配置成三层路由口后将使该接口上运行的二层协议失效。  \n+ 支持二层聚合口上配置。  \n【命令格式】 no switchport\n【参数说明】 -^\n【缺省配置】 缺省情况下，交换机上的AP端口缺省为二层AP口\n【命令模式】 接口配置模式\n【使用指导】 在三层交换机设备上，进入二层AP口的接口模式后，使用该命令可以将一个二层AP口配置成三层AP口。进入三层AP口的接口模式后，使用switchport命令可以将一个三层AP口转换成二层AP口。\n\n", "出处 [2] [None](http://127.0.0.1:7861/knowledge_base/download_doc?knowledge_base_name=cloudResources&file_name=None) \n\n{\"head1\": \"配置指南-以太网交换\", \"head2\": \"3 Aggregate Port\", \"head3\": \"3.4 配置详解\", \"head4\": \"3.4.1 配置静态 AP\", \"head5\": \"配置方法\", \"head6\": \"二层 AP 与三层 AP 的转化\"}\n+ 为可选配置。  \n+ 如果需要启用AP口的三层路由等功能，比如需要在AP口上配置IP地址，或者配置静态路由表项等，需要先将二层AP口转化为三层AP口，再在三层AP口上启用路由等功能。  \n+ 该功能可在三层交换机等支持二、三层功能和AP功能的设备上配置。  \n【命令格式】 no switchport\n【参数说明】 -\n【缺省配置】 在支持二、三层功能和接口二、三层转换功能的设备上，AP口缺省为二层口。\n【命令模式】 AP接口配置模式\n【使用指导】 L3 AP是三层设备才支持的功能，所有二层设备均不支持。  \n对于三层设备，如果该设备不支持二层功能，AP口被创建时，则是一个三层AP口，否则AP口被创建时是一个二层AP口。\n\n", "出处 [3] [None](http://127.0.0.1:7861/knowledge_base/download_doc?knowledge_base_name=cloudResources&file_name=None) \n\n{\"head1\": \"配置指南-以太网交换\", \"head2\": \"3 Aggregate Port\", \"head3\": \"3.4 配置详解\", \"head4\": \"3.4.5 配置 AP 的容量模式\", \"head5\": \"配置方法\", \"head6\": \"配置 AP 容量模式\"}\n+ 为可选配置，当需要改变当前系统AP的容量值时配置，以适应网络部署中AP的个数或者每个AP口允许聚合的成员口个数的变化需求。  \n+ 可在核心交换机等支持改变AP容量功能的设备上配置该功能。  \n【命令格式】 aggregateport capacity mode capacity-mode\n【参数说明】 capacity-mode： 模式选项\n【缺省配置】 缺省情况下，AP的容量模式随着不同的产品系列而不同，比如有256*16(其中， 256 代表设备支持的最大AP口个数， 16 代表每个AP口支持的最大成员口个数)等容量模式。\n【命令模式】 全局配置模式\n【使用指导】 在支持容量模式配置的产品中，系统会提供几种可配置的容量模式供用户选择，在全局配置模式下，用户可以通过aggregateport capacity mode capacity-mode配置命令来选择需要的容量模式。用户可以在全局配置模式下，通过no aggregateport capacity mode 将容量模式恢复为默认值。\n\n"]}
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机,如何开启接口索引永久化功能，即设备重启后接口索引不变,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+<指令>根据已知信息，简洁和专业的来回答问题。如果无法从中得到答案，请说 “根据已知信息无法回答该问题”，不允许在答案中添加编造成分，答案请使用中文。 </指令>
+<已知信息>{"head1": "配置指南-以太网交换", "head2": "1  接口", "head3": "1.3 功能详解", "head4": "1.3.8 接口索引永久化功能", "head5": "工作原理"}
+当配置了该功能，设备重启后相同接口的接口索引值保持不变。
+{"head1": "配置指南-以太网交换", "head2": "1  接口", "head3": "1.3 功能详解", "head4": "1.4.1 接口配置管理", "head5": "**检验方法**", "head6": "配置接口索引永久化"}
++ 配置完该命令后，执行write保存配置操作，重启设备后，通过show interface命令查看接口的接口索引值，如果对于同一个接口的索引值在设备重启后保持一致，那么说明接口的索引永久化功能是正常的。
+{"head1": "配置指南-以太网交换", "head2": "1  接口", "head3": "1.3 功能详解", "head4": "1.3.8 接口索引永久化功能"}
+和接口的名字一样，接口索引也可以用于标识一个接口，接口索引是一个接口的“身份ID”，每个接口创建时，系统会自动为每个接口分配不重复的接口索引值，而当设备重启后，一个接口的索引值可能会和重启前的不一致。接口索引永久化功能，即设备重启后接口索引不变。</已知信息>
+<问题>RUIJIERG-S6000E系列交换机,如何开启接口索引永久化功能，即设备重启后接口索引不变,请生成配置指令代码</问题><eot_id>
+{"docs": ["出处 [1] [None](http://127.0.0.1:7861/knowledge_base/download_doc?knowledge_base_name=cloudResources&file_name=None) \n\n{\"head1\": \"配置指南-以太网交换\", \"head2\": \"1  接口\", \"head3\": \"1.3 功能详解\", \"head4\": \"1.3.8 接口索引永久化功能\", \"head5\": \"工作原理\"}\n当配置了该功能，设备重启后相同接口的接口索引值保持不变。\n\n", "出处 [2] [None](http://127.0.0.1:7861/knowledge_base/download_doc?knowledge_base_name=cloudResources&file_name=None) \n\n{\"head1\": \"配置指南-以太网交换\", \"head2\": \"1  接口\", \"head3\": \"1.3 功能详解\", \"head4\": \"1.4.1 接口配置管理\", \"head5\": \"**检验方法**\", \"head6\": \"配置接口索引永久化\"}\n+ 配置完该命令后，执行write保存配置操作，重启设备后，通过show interface命令查看接口的接口索引值，如果对于同一个接口的索引值在设备重启后保持一致，那么说明接口的索引永久化功能是正常的。\n\n", "出处 [3] [None](http://127.0.0.1:7861/knowledge_base/download_doc?knowledge_base_name=cloudResources&file_name=None) \n\n{\"head1\": \"配置指南-以太网交换\", \"head2\": \"1  接口\", \"head3\": \"1.3 功能详解\", \"head4\": \"1.3.8 接口索引永久化功能\"}\n和接口的名字一样，接口索引也可以用于标识一个接口，接口索引是一个接口的“身份ID”，每个接口创建时，系统会自动为每个接口分配不重复的接口索引值，而当设备重启后，一个接口的索引值可能会和重启前的不一致。接口索引永久化功能，即设备重启后接口索引不变。\n\n"]}
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机,如何配置接口的属性，接口模式下，如何设置接口的带宽参数,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": {
+        "query": "RUIJIERG-S6000E系列交换机,如何配置接口的属性，接口模式下，如何设置接口的带宽参数",
+        "knowledge_base_name": "cloudResources",
+        "stream": true
+    },
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机,如何配置接口的属性，接口模式下，如何设置接口的带宽参数,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+<指令>根据已知信息，简洁和专业的来回答问题。如果无法从中得到答案，请说 “根据已知信息无法回答该问题”，不允许在答案中添加编造成分，答案请使用中文。 </指令>
+<已知信息>{"head1": "配置指南-以太网交换", "head2": "4 VLAN", "head3": "4.4 配置详解", "head4": "4.4.1 配置基本 VLAN", "head5": "配置方法", "head6": "向当前 VLAN 添加 ACCESS 口"}
++ 可选配置。
++ 该命令只对Access口有效，VLAN添加Access口后，接口可传输该VLAN数据。
++ 交换机设备上配置。  
+【命令格式】 add interface { interface-id | range interface-range }
+【参数说明】 interface-id：单个接口
+interface-range：多个接口
+【缺省配置】 缺省情况下，所有二层以太网口都属于VLAN1
+【命令模式】 VLAN配置模式
+【使用指导】 在VLAN配置模式下，将指定的Access口加入该VLAN。该命令的配置效果同在接口模式下指定该接口所属
+VLAN的命令（即switchport access vlan vlan-id）效果一致。  
+对于两种形式的接口加入VLAN命令，配置生效的原则是后配置的命令覆盖前面配置的命令
+{"head1": "配置指南-ACL&QOS"}
+RG-S6000E系列交换机ACL&QOS配置  
+本分册介绍ACL&QOS配置指南相关内容，包括以下章节：  
+1. ACL  
+2. QOS  
+3. MMU
+{"head1": "配置指南-以太网交换", "head2": "5 MAC VLAN", "head3": "5.3 功能详解", "head4": "5.3.1 MAC VLAN"}
+**工作原理**  
+当交换机收到报文时，将数据流的源MAC与MAC VLAN表项中指定的MAC地址进行匹配。如果匹配成功，则将该报文转发到MAC VLAN表项指定的VLAN中；如果匹配失败，则该数据流所属的VLAN仍然由端口的VLAN规则决定。  
+为了实现PC从任意交换机接入时，都会被划分到指定的VLAN，可以通过如下两种方式进行配置：  
++ 通过命令行静态配置。用户通过命令行在本地交换机设备上配置 MAC地址和VLAN的关联关系。
++ 通过认证服务器来自动配置（802.1X VLAN下发功能）。当用户认证通过后，交换机根据认证服务器提供的信息，动态创建MAC地址和VLAN的关联关系。用户下线时，交换机将自动删除该对应关系。该方式需要在认证服务器上配置MAC地址和VLAN的关联，有关“802.1X VLAN下发功能”的详细介绍请参见“802.1X配置”。  
+MAC VLAN表项可以同时支持两种配置方式，即在本地设备和认证服务器上都进行了配置，但是这两种配置必须一致配置才能生效；如果不一致的话，则先执行的配置生效。  
+基于MAC的VLAN功能只能在^ HYBRID端口上配置。  
+MAC VLAN表项仅针对UNTAG的报文生效，对携带TAG的报文不生效。  
+静态配置或动态生成MAC VLAN表项时，指定VLAN必需已经存在。  
+MAC VLAN表项中指定的VLAN不能是Super VLAN(可以是Sub VLAN)、Remote VLAN、Primary VLAN（可以是Secondary VLAN）。  
+MAC VLAN表项中指定的MAC地址必须是单播地址。  
+MAC VLAN表项对所有开启MAC VLAN功能的HYBRID端口生效。</已知信息>
+<问题>RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码</问题><eot_id>
+{"docs": ["出处 [1] [None](http://127.0.0.1:7861/knowledge_base/download_doc?knowledge_base_name=cloudResources&file_name=None) \n\n{\"head1\": \"配置指南-以太网交换\", \"head2\": \"4 VLAN\", \"head3\": \"4.4 配置详解\", \"head4\": \"4.4.1 配置基本 VLAN\", \"head5\": \"配置方法\", \"head6\": \"向当前 VLAN 添加 ACCESS 口\"}\n+ 可选配置。\n+ 该命令只对Access口有效，VLAN添加Access口后，接口可传输该VLAN数据。\n+ 交换机设备上配置。  \n【命令格式】 add interface { interface-id | range interface-range }\n【参数说明】 interface-id：单个接口\ninterface-range：多个接口\n【缺省配置】 缺省情况下，所有二层以太网口都属于VLAN1\n【命令模式】 VLAN配置模式\n【使用指导】 在VLAN配置模式下，将指定的Access口加入该VLAN。该命令的配置效果同在接口模式下指定该接口所属\nVLAN的命令（即switchport access vlan vlan-id）效果一致。  \n对于两种形式的接口加入VLAN命令，配置生效的原则是后配置的命令覆盖前面配置的命令\n\n", "出处 [2] [None](http://127.0.0.1:7861/knowledge_base/download_doc?knowledge_base_name=cloudResources&file_name=None) \n\n{\"head1\": \"配置指南-ACL&QOS\"}\nRG-S6000E系列交换机ACL&QOS配置  \n本分册介绍ACL&QOS配置指南相关内容，包括以下章节：  \n1. ACL  \n2. QOS  \n3. MMU\n\n", "出处 [3] [None](http://127.0.0.1:7861/knowledge_base/download_doc?knowledge_base_name=cloudResources&file_name=None) \n\n{\"head1\": \"配置指南-以太网交换\", \"head2\": \"5 MAC VLAN\", \"head3\": \"5.3 功能详解\", \"head4\": \"5.3.1 MAC VLAN\"}\n**工作原理**  \n当交换机收到报文时，将数据流的源MAC与MAC VLAN表项中指定的MAC地址进行匹配。如果匹配成功，则将该报文转发到MAC VLAN表项指定的VLAN中；如果匹配失败，则该数据流所属的VLAN仍然由端口的VLAN规则决定。  \n为了实现PC从任意交换机接入时，都会被划分到指定的VLAN，可以通过如下两种方式进行配置：  \n+ 通过命令行静态配置。用户通过命令行在本地交换机设备上配置 MAC地址和VLAN的关联关系。\n+ 通过认证服务器来自动配置（802.1X VLAN下发功能）。当用户认证通过后，交换机根据认证服务器提供的信息，动态创建MAC地址和VLAN的关联关系。用户下线时，交换机将自动删除该对应关系。该方式需要在认证服务器上配置MAC地址和VLAN的关联，有关“802.1X VLAN下发功能”的详细介绍请参见“802.1X配置”。  \nMAC VLAN表项可以同时支持两种配置方式，即在本地设备和认证服务器上都进行了配置，但是这两种配置必须一致配置才能生效；如果不一致的话，则先执行的配置生效。  \n基于MAC的VLAN功能只能在^ HYBRID端口上配置。  \nMAC VLAN表项仅针对UNTAG的报文生效，对携带TAG的报文不生效。  \n静态配置或动态生成MAC VLAN表项时，指定VLAN必需已经存在。  \nMAC VLAN表项中指定的VLAN不能是Super VLAN(可以是Sub VLAN)、Remote VLAN、Primary VLAN（可以是Secondary VLAN）。  \nMAC VLAN表项中指定的MAC地址必须是单播地址。  \nMAC VLAN表项对所有开启MAC VLAN功能的HYBRID端口生效。\n\n"]}
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+请你回答我的问题:
+RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码<eot_id>
+{"docs": ["<span style='color:red'>未找到相关文档,该回答为大模型自身能力解答！</span>"]}
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+请你回答我的问题:
+RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码<eot_id>
+{"docs": ["<span style='color:red'>未找到相关文档,该回答为大模型自身能力解答！</span>"]}
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机,如何开启接口索引永久化功能，即设备重启后接口索引不变,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机,如何开启接口索引永久化功能，即设备重启后接口索引不变,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机,如何开启接口索引永久化功能，即设备重启后接口索引不变,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符,请生成配置指令代码",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机,如何配置三层AP口",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机,如何开启接口索引永久化功能，即设备重启后接口索引不变",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机,如何配置接口的属性，接口模式下，如何设置接口的带宽参数",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机,如何配置接口的属性，接口模式下，如何设置接口的带宽参数",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机,如何开启接口索引永久化功能，即设备重启后接口索引不变",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置单个指定的接口",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置一定范围的接口",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的索引永久化",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+<指令>根据已知信息，简洁和专业的来回答问题。如果无法从中得到答案，请说 “根据已知信息无法回答该问题”，不允许在答案中添加编造成分，答案请使用中文。 </指令>
+<已知信息>{"head1": "配置指南-以太网交换", "head2": "1  接口", "head3": "1.3 功能详解", "head4": "1.3.2 接口的描述和管理状态", "head5": "工作原理", "head6": "接口的描述"}
+用户可以根据要表达的含义来设置接口的具体名称，比如，用户想将 GigabitEthernet 1/1 分配给用户 A 专门使用，用户就可以 将这个接口的描述设置为“Port for User A”。
+{"head1": "配置指南-以太网交换", "head2": "1  接口", "head3": "1.3 功能详解", "head4": "1.4.1 接口配置管理", "head5": "**配置方法**", "head6": "配置接口的 LinkTrap"}
++ 可选配置。  
++ 可以用于通过SNMP获取接口状态变化的Trap信息。  
+【命令格式】 snmp trap link-status
+【参数说明】 -^
+【缺省配置】 缺省情况下，该功能打开
+【命令模式】 接口配置模式
+【使用指导】 该命令配置是否发送该接口的LinkTrap，当功能打开时，如果接口的Link状态变化，SNMP将发出LinkTrap，反之则不发。可以使用该命令的no命令或者default命令形式关闭该功能。</已知信息>
+<问题>RUIJIERG-S6000E系列交换机，如何配置接口的描述符</问题><eot_id>
+{"docs": ["出处 [1] [None](http://127.0.0.1:7861/knowledge_base/download_doc?knowledge_base_name=cloudResources&file_name=None) \n\n{\"head1\": \"配置指南-以太网交换\", \"head2\": \"1  接口\", \"head3\": \"1.3 功能详解\", \"head4\": \"1.4.1 接口配置管理\", \"head5\": \"**配置方法**\", \"head6\": \"配置接口的描述符\"}\n+ 可选配置。  \n+ 可以用于为接口设置描述信息时使用。  \n【命令格式】 description string\n【参数说明】 string： 最长 80 个字符\n【缺省配置】 缺省无接口描述符\n【命令模式】 接口配置模式\n【使用指导】 该命令配置接口的描述符。可以使用该命令的no命令或者default命令形式取消配置接口的描述符。-\n\n", "出处 [2] [None](http://127.0.0.1:7861/knowledge_base/download_doc?knowledge_base_name=cloudResources&file_name=None) \n\n{\"head1\": \"配置指南-以太网交换\", \"head2\": \"1  接口\", \"head3\": \"1.3 功能详解\", \"head4\": \"1.3.2 接口的描述和管理状态\", \"head5\": \"工作原理\", \"head6\": \"接口的描述\"}\n用户可以根据要表达的含义来设置接口的具体名称，比如，用户想将 GigabitEthernet 1/1 分配给用户 A 专门使用，用户就可以 将这个接口的描述设置为“Port for User A”。\n\n", "出处 [3] [None](http://127.0.0.1:7861/knowledge_base/download_doc?knowledge_base_name=cloudResources&file_name=None) \n\n{\"head1\": \"配置指南-以太网交换\", \"head2\": \"1  接口\", \"head3\": \"1.3 功能详解\", \"head4\": \"1.4.1 接口配置管理\", \"head5\": \"**配置方法**\", \"head6\": \"配置接口的 LinkTrap\"}\n+ 可选配置。  \n+ 可以用于通过SNMP获取接口状态变化的Trap信息。  \n【命令格式】 snmp trap link-status\n【参数说明】 -^\n【缺省配置】 缺省情况下，该功能打开\n【命令模式】 接口配置模式\n【使用指导】 该命令配置是否发送该接口的LinkTrap，当功能打开时，如果接口的Link状态变化，SNMP将发出LinkTrap，反之则不发。可以使用该命令的no命令或者default命令形式关闭该功能。\n\n"]}
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+
+{"docs": ["出处 [1] [None](http://127.0.0.1:7861/knowledge_base/download_doc?knowledge_base_name=cloudResources&file_name=None) \n\n{\"head1\": \"配置指南-以太网交换\", \"head2\": \"1  接口\", \"head3\": \"1.3 功能详解\", \"head4\": \"1.4.1 接口配置管理\", \"head5\": \"**配置方法**\", \"head6\": \"配置接口的描述符\"}\n+ 可选配置。  \n+ 可以用于为接口设置描述信息时使用。  \n【命令格式】 description string\n【参数说明】 string： 最长 80 个字符\n【缺省配置】 缺省无接口描述符\n【命令模式】 接口配置模式\n【使用指导】 该命令配置接口的描述符。可以使用该命令的no命令或者default命令形式取消配置接口的描述符。-\n\n", "出处 [2] [None](http://127.0.0.1:7861/knowledge_base/download_doc?knowledge_base_name=cloudResources&file_name=None) \n\n{\"head1\": \"配置指南-以太网交换\", \"head2\": \"1  接口\", \"head3\": \"1.3 功能详解\", \"head4\": \"1.3.2 接口的描述和管理状态\", \"head5\": \"工作原理\", \"head6\": \"接口的描述\"}\n用户可以根据要表达的含义来设置接口的具体名称，比如，用户想将 GigabitEthernet 1/1 分配给用户 A 专门使用，用户就可以 将这个接口的描述设置为“Port for User A”。\n\n"]}
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
+
+{"docs": ["出处 [1] [None](http://127.0.0.1:7861/knowledge_base/download_doc?knowledge_base_name=cloudResources&file_name=None) \n\n{\"head1\": \"配置指南-以太网交换\", \"head2\": \"1  接口\", \"head3\": \"1.3 功能详解\", \"head4\": \"1.4.1 接口配置管理\", \"head5\": \"**配置方法**\", \"head6\": \"配置接口的描述符\"}\n+ 可选配置。  \n+ 可以用于为接口设置描述信息时使用。  \n【命令格式】 description string\n【参数说明】 string： 最长 80 个字符\n【缺省配置】 缺省无接口描述符\n【命令模式】 接口配置模式\n【使用指导】 该命令配置接口的描述符。可以使用该命令的no命令或者default命令形式取消配置接口的描述符。-\n\n", "出处 [2] [None](http://127.0.0.1:7861/knowledge_base/download_doc?knowledge_base_name=cloudResources&file_name=None) \n\n{\"head1\": \"配置指南-以太网交换\", \"head2\": \"1  接口\", \"head3\": \"1.3 功能详解\", \"head4\": \"1.3.2 接口的描述和管理状态\", \"head5\": \"工作原理\", \"head6\": \"接口的描述\"}\n用户可以根据要表达的含义来设置接口的具体名称，比如，用户想将 GigabitEthernet 1/1 分配给用户 A 专门使用，用户就可以 将这个接口的描述设置为“Port for User A”。\n\n"]}
+==============================/chat/knowledge_base_chat  input {
+    "query": "RUIJIERG-S6000E系列交换机，如何配置接口的描述符",
+    "knowledge_base_name": "cloudResources",
+    "stream": true
+}==============================
+==============================/chat/knowledge_base_chat  output==============================
